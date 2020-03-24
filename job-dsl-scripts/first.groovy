@@ -26,10 +26,11 @@ class AntJob {
     }
 
     String artifact_name = AntJob.artifactName("${antApp.qualifier}")
-    String vah = AntJob.virtualAddressHandle("${antApp.qualifier}")
-    String environment = AntJob.appEnvironment("${antApp.qualifier}")
-    String environment_folder = AntJob.appEnviromentFolder("${antApp.qualifier}")
+    String vah = AntJob.virutalAddressHandle("${antApp.qualifier}")
     String app_jdk = AntJob.jdkVersion("${antApp.qualifier}")
+    String environment = AntJob.appEnvironment("${antApp.qualifier}")
+    String environment_folder = AntJob.appEnvironmentFolder("${antApp.qualifier}")
+
 
     folder("${environment}")
 
