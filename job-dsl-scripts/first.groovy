@@ -1,3 +1,4 @@
+import jenkins.model.*
 class AntJob {
     static String artifactName(String qualifier) {
         qualifier.split(/-/)[0]
@@ -32,8 +33,10 @@ class AntJob {
 
     folder("${environment}")
 
-    job("${artifact_name}-build") {
-        description("Builds ${artifact_name} in ${environment}")
+    pipelineJob("${artifact_name}-pipeline") {
+        description{
+            scriptPath("pipeline-scripts/first_pipeline")
+        }
     }
 
 }
