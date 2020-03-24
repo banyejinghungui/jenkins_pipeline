@@ -1,4 +1,6 @@
 import jenkins.model.*
+import groovy.transform.field
+
 class AntJob {
     static String artifactName(String qualifier) {
         qualifier.split(/-/)[0]
