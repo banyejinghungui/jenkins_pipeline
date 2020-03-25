@@ -36,7 +36,7 @@ class AntJob {
 
     folder("${environment}")
 
-    pipelineJob("${artifact_name}-pipeline") {
+    pipelineJob("${appEnvironmentFolder}/${artifact_name}-pipeline") {
         definition {
                 cpsScm {
                         scm{
