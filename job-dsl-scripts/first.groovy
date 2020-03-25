@@ -41,7 +41,7 @@ class AntJob {
                 cpsScm {
                         scm{
                             git {
-                                branch(develop)
+                                branch('develop')
                                 remote {
                                     url('https://github.com/banyejinghungui/jenkins_pipeline.git')
                                     credentials('banyejinghungui')
