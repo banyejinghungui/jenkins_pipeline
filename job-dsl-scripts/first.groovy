@@ -1,5 +1,5 @@
 import jenkins.model.*
-import groovy.transform.field
+import groovy.transform.Field
 
 class AntJob {
     static String artifactName(String qualifier) {
