@@ -38,7 +38,17 @@ class AntJob {
 
     pipelineJob("${artifact_name}-pipeline") {
         definition {
-            scriptPath("pipeline-scripts/first_pipeline")
+                cpsScm {
+                    git {
+                        branch(develop)
+                        remote {
+                            url('https://github.com/banyejinghungui/jenkins_pipeline.git')
+                            credentials('banyejinghungui')
+                        }
+                    }
+                    scriptPath("pipeline-scripts/first_pipeline")
+                }
+
         }
     }
 
