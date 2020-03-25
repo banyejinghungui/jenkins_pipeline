@@ -40,11 +40,11 @@ class AntJob {
     pipelineJob("${environment_folder}/${artifact_name}-pipeline") {
         definition {
                 cpsScm {
-                        scm{
+                    scm {
                         JobUtils.addGitRepo_chance(delegate, "develop", delegate)
                         scriptPath("pipeline-scripts/first_pipeline")
+                    }
                 }
-
         }
     }
 
