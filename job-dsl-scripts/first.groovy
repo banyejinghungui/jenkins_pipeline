@@ -37,7 +37,7 @@ class AntJob {
     folder("${environment}")
 
     pipelineJob("${artifact_name}-pipeline") {
-        description{
+        definition {
             scriptPath("pipeline-scripts/first_pipeline")
         }
     }
