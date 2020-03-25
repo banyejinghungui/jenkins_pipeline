@@ -1,4 +1,4 @@
-package com.chance.jobdsl
+package main.groovy.com.chance.jobdsl
 import jenkins.model.*
 
 class JobUtils {
