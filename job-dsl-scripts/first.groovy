@@ -1,5 +1,6 @@
 import jenkins.model.*
 import groovy.transform.Field
+import com.chance.jobdsl.JobUtils
 
 class AntJob {
     static String artifactName(String qualifier) {
@@ -40,14 +41,7 @@ class AntJob {
         definition {
                 cpsScm {
                         scm{
-                            git {
-                                branch('develop')
-                                remote {
-                                    url('https://github.com/banyejinghungui/jenkins_pipeline.git')
-                                    credentials('b6cba214-602b-4337-8799-3c1b6aa911a9')
-                                }
-                            }
-                        }
+                        JobUtils.addGitRepo_chance(delegate, "develop", delegate)
                         scriptPath("pipeline-scripts/first_pipeline")
                 }
 
