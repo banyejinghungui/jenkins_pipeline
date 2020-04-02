@@ -1,6 +1,6 @@
 import jenkins.model.*
+import main.groovy.com.chance.jobdsl
 import groovy.transform.Field
-import com.chance.jobdsl.JobUtils
 
 class AntJob {
     static String artifactName(String qualifier) {
@@ -43,6 +43,7 @@ class AntJob {
                     scm {
                         JobUtils.addGitRepo_chance(delegate, "develop", delegate)
                         scriptPath("pipeline-scripts/first_pipeline")
+
                     }
                 }
         }
