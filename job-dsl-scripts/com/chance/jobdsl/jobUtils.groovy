@@ -1,4 +1,4 @@
-package com.chance.jobdsl
+package 
 import jenkins.model.*
 
 class JobUtils {
