@@ -34,19 +34,20 @@ class AntJob {
     String environment = AntJob.appEnvironment("${antApp.qualifier}")
     String environment_folder = AntJob.appEnvironmentFolder("${antApp.qualifier}")
 
+    String first_host = Constants.host
 
     folder("${environment}")
 
     pipelineJob("${environment_folder}/${artifact_name}-pipeline") {
-        definition {
-                cpsScm {
-                    scm {
-                        JobUtils.addGitRepo_chance(delegate, "develop", delegate)
-                        scriptPath("pipeline-scripts/first_pipeline")
-
-                    }
-                }
-        }
+//        definition {
+//                cpsScm {
+//                    scm {
+//                        JobUtils.addGitRepo_chance(delegate, "develop", delegate)
+//                        scriptPath("pipeline-scripts/first_pipeline")
+//
+//                    }
+//                }
+//        }
     }
 
 }
