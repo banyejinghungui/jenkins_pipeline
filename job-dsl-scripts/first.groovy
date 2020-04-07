@@ -48,10 +48,12 @@ class AntJob {
 //                    }
 //                }
 //        }
-        stage('build') {
-            steps {
-                script {
-                    echo "Building on ... ${first_host}"
+        stages {
+            stage('build') {
+                steps {
+                    script {
+                        echo "Building on ... ${first_host}"
+                    }
                 }
             }
         }
