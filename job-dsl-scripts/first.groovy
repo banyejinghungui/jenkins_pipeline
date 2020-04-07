@@ -1,5 +1,6 @@
 import jenkins.model.*
 import com.chance.jobdsl.Constants
+import com.chance.jobdsl.JobUtils
 import groovy.transform.Field
 
 class AntJob {
