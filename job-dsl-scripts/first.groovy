@@ -40,15 +40,15 @@ class AntJob {
     folder("${environment}")
 
     pipelineJob("${environment_folder}/${artifact_name}-${first_host}-pipeline") {
-//        definition {
-//                cpsScm {
-//                    scm {
-//                        JobUtils.addGitRepo_chance(delegate, "develop", delegate)
-//                        scriptPath("pipeline-scripts/first_pipeline")
-//
-//                    }
-//                }
-//        }
+       definition {
+               cpsScm {
+                   scm {
+                       JobUtils.addGitRepo_chance(delegate, "develop", delegate)
+                       scriptPath("pipeline-scripts/first_pipeline")
+
+                   }
+               }
+       }
 
     }
 
