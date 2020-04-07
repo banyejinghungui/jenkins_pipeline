@@ -43,7 +43,7 @@ class AntJob {
        definition {
                cpsScm {
                    scm {
-                       JobUtils.addGitRepo_chance(delegate, "develop", delegate)
+                       JobUtils.addGitRepo_chance(delegate, "develop", credentials)
                        scriptPath("pipeline-scripts/first_pipeline")
 
                    }
